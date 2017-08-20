@@ -28,15 +28,7 @@ public class Servlet extends HttpServlet {
         String fileAsString = IOUtils.toString(fileContent, StandardCharsets.UTF_8);//converting inputStream into a String
         String[] logDataAsArray = fileAsString.split("\n"); //saving as A string array to pass it to the verifyService as parameter
         boolean isValid = verifyService.verifyLog(secret,logDataAsArray); //saving result of verification as a boolean to forward into response jsp
-        request.setAttribute("isValid",isValid);
         request.getRequestDispatcher("/index.jsp?isValid="+isValid).forward(request,response);
-
-/*        if (isValid){
-            request.getRequestDispatcher("/isValid.jsp").forward(request,response);
-        } else {
-            request.getRequestDispatcher("/isCorrupt.jsp").forward(request,response);
-        }*/
-
 
     }
 
