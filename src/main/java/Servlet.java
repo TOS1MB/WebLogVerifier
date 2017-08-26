@@ -12,9 +12,6 @@ import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Paths;
 
-/**
- * Created by tolgasirvan on 01.07.17.
- */
 
 @WebServlet(urlPatterns = "/verify")
 @MultipartConfig

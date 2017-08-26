@@ -1,8 +1,5 @@
 import java.io.*;
 
-/**
- * Created by tolgasirvan on 04.07.17.
- */
 public class VerifyService {
     public boolean verifyLog(String secret, String [] logDataAsArray) {
 
